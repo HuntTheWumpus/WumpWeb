@@ -17,7 +17,7 @@ namespace WumpWeb.Pages.Scores
         public string category {get; set;}
         public string name {get; set; }
         public string detail {get; set; }
-        private static int _count = 0;
+        //private static int _count = 0;
 
         public Question(JToken obj)
         {
@@ -26,7 +26,7 @@ namespace WumpWeb.Pages.Scores
             name = obj["name"].ToString();
             try {
                 detail = obj["detail"].ToString();
-            } catch (NullReferenceException e)
+            } catch (NullReferenceException)
             {
                 detail = "";
             } 
@@ -43,7 +43,7 @@ namespace WumpWeb.Pages.Scores
             type = obj["type"].ToString();
             try {
                 criteria = obj["criteria"].ToString();
-            } catch(NullReferenceException e)
+            } catch(NullReferenceException)
             {
                 criteria = "";
             }

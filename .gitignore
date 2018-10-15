@@ -2,7 +2,7 @@
 .vscode/
 
 # Build Results
-[Bb]in/
+[Bb]in/Debug
 [Oo]bj/
 
 # Temporary folders

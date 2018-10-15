@@ -1,0 +1,78 @@
+{
+    "judging_criteria": [
+        { 
+            "id": 1, 
+            "category": "Code Quality", 
+            "name": "Code Clarity",
+            "rubric": [
+                {"score":0, "type":"No Credit", "criteria": "Extremely difficult to understand, no or unhelpful comments"},
+                {"score":1, "type":"Below Expectation", "criteria": "Code can be read and understood with significant effort or explanation by the team"},
+                {"score":2, "type":"Meets Requirement", "criteria": "Code is understandable, decently commented, or easy to understand with brief discussions with the team."},
+                {"score":3, "type":"Surpasses Requirement", "criteria": "Code does not require much discussion with the team. Code structure is clear, and code is readable. Comments are present."},
+                {"score":4, "type":"Exceptional", "criteria": "Outstanding code clarity. Code is simple to follow, well formatted, and commented throughout the entire solution."}
+            ]
+        },
+        { 
+            "id":3,
+            "category": "Code Quality",
+            "name":"Persisted Data Formats",
+            "detail":"for non-code generated data",
+            "rubric": [
+                {"score":0, "type":"No Credit", "criteria": "Persisted data structures are hard coded straight in the code."},
+                {"score":1, "type":"Below Expectation", "criteria": "Some data is stored on the disk, but some is still hard coded."},
+                {"score":2, "type":"Meets Requirement", "criteria": "Data stored on disk is in files that are read and written by the game."},
+                {"score":3, "type":"Surpasses Requirement", "criteria": "Data stored on disk is in standard, easily readable formats (JSON, XML, etc.)"},
+            ]
+        },
+        { 
+            "id":6,
+            "category":"Implementation",
+            "name":"Hazards",
+            "detail":"Bats, Pits, Wumpus",
+            "rubric": [
+                {"score":0, "type":"No Credit", "criteria": "No hints are given when near a hazard. No hazards exist."},
+                {"score":1, "type":"Below Expectation", "criteria": "Hints are inconsistent or only given for some hazards. Not all hazards exist."},
+                {"score":2, "type":"Meets Requirement", "criteria": "All hazards are implemented, and warnings are given for all hazards at appropriate times."}
+            ]
+        },
+        { 
+            "id":7,
+            "category":"Implementation",
+            "name":"Scoring",
+            "rubric": [
+                {"score":0, "type":"No Credit", "criteria": "Scores are not kept."},
+                {"score":1, "type":"Below Expectation", "criteria": "Score calculated"},
+                {"score":2, "type":"Meets Requirement", "criteria": "Score is kept, and top 10 high scores persists between launches with names and cave played."}
+            ]
+        },
+        { 
+            "id":13,
+            "category":"Innovation",
+            "name":"Gameplay",
+            "detail":"Changed gameplay elements, (e.g. persistent high score, replace trivia with minigame, changed game rules, intelligent Wumpus, many levels of difficulty, etc.)",
+            "rubric": [
+                {"score":0, "type":"No Value Added"},
+                {"score":1, "type":"Some Value Added"},
+                {"score":2, "type":"Moderate Value Added"},
+                {"score":3, "type":"High Value Added"}
+            ],
+            "notes":"true"
+        }
+    ],
+    "teams": [
+        {"id":1, "school": "Redmond", "name": "Team 1"},
+        {"id":2, "school": "Redmond", "name": "Team 2"},
+        {"id":3, "school": "Issaquah", "name": "Team 3"},
+        {"id":4, "school": "Bothel", "name": "Team 4"}
+    ],
+    "judges": [
+        {"id":1, "name": "Shlok", "key":"guid1"},
+        {"id":2, "name": "Sarah", "key":"guid2"},
+        {"id":3, "name": "Sue", "key":"guid3"}
+    ],
+    "judge_assignment": [
+        {"judge_id":1, "rubric_category":"Code Quality", "teams": [1, 2, 3, 4] },
+        {"judge_id":2, "rubric_category":"Innovation"},
+        {"judge_id":3, "default":"true"}
+    ]
+}
