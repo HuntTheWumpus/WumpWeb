@@ -1,0 +1,40 @@
+@page
+@model WumpWeb.Pages.Scores.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Score</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.Judge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.Judge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.Team)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.Team)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.TotalScore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.TotalScore)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Score.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>

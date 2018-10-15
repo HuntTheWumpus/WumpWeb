@@ -1,0 +1,37 @@
+@page
+@model WumpWeb.Pages.Scores.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Score</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.Judge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.Judge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.Team)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.Team)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Score.TotalScore)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Score.TotalScore)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Score.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
